@@ -11,6 +11,7 @@ export const _screens = {
   Bonus: 'Bonus',
   Home: 'Home',
   Detail: 'Detail',
+  SeatBook: 'SeatBook',
 };
 
 export const _color = {

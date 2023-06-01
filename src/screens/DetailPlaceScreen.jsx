@@ -7,57 +7,64 @@ import TextR from '../components/Text';
 
 export default function DetailPlaceScreen({navigation}) {
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: _const.backgroundBase}}>
-      <StatusBar style="light" />
+    <View style={{flex: 1, backgroundColor: _const.backgroundBase}}>
+      <StatusBar animated style="#aaaaaa" />
       {/* <ScrollView showsVerticalScrollIndicator={false}> */}
       <View style={{flex: 0.8, backgroundColor: 'red'}}>
         <Image source={require('../../assets/ciliwung.png')} style={{width: '100%', height: '100%', resizeMode: 'cover'}} />
       </View>
       <View style={{flex: 1, paddingHorizontal: _const.padding, paddingBottom: 31}}>
-        <View style={{marginTop: -50, backgroundColor: _color.white, flex: 0.8, borderRadius: 24, paddingHorizontal: 20, paddingVertical: 30}}>
-          <TextR fontFamily={_fonts.semibold} fontSize={16}>
-            About
-          </TextR>
-          <TextR style={{marginTop: 6, lineHeight: 26}}>Berada di jalur jalan provinsi yang menghubungkan Denpasar Singaraja serta letaknya yang dekat dengan Kebun Raya Eka Karya menjadikan tempat Bali.</TextR>
-          <View style={{marginTop: 20}}>
+        <View style={{marginTop: -50, backgroundColor: _color.white, flex: 0.8, borderRadius: 24}}>
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{
+              paddingHorizontal: 20,
+              paddingVertical: 30,
+            }}>
             <TextR fontFamily={_fonts.semibold} fontSize={16}>
-              Photos
+              About
             </TextR>
-            <View style={{flexDirection: 'row', marginTop: 6}}>
-              <Image source={require('../../assets/ciliwung.png')} style={{width: 70, height: 70, borderRadius: 24}} />
-              <Image source={require('../../assets/ciliwung.png')} style={{width: 70, height: 70, borderRadius: 24, marginLeft: 16}} />
-              <Image source={require('../../assets/ciliwung.png')} style={{width: 70, height: 70, borderRadius: 24, marginLeft: 16}} />
-            </View>
-          </View>
-          <View style={{marginTop: 20}}>
-            <TextR fontFamily={_fonts.semibold} fontSize={16}>
-              Interests
-            </TextR>
-            <View style={{flexDirection: 'row'}}>
-              <View style={{flex: 1}}>
-                <View style={{flexDirection: 'row', marginTop: 10}}>
-                  <Image source={require('../../assets/check-circle.png')} style={{width: 16, height: 16, marginRight: 6}} />
-                  <TextR>Kids Park</TextR>
-                </View>
-
-                <View style={{flexDirection: 'row', marginTop: 10}}>
-                  <Image source={require('../../assets/check-circle.png')} style={{width: 16, height: 16, marginRight: 6}} />
-                  <TextR>Kids Park</TextR>
-                </View>
-              </View>
-              <View style={{flex: 1}}>
-                <View style={{flexDirection: 'row', marginTop: 10}}>
-                  <Image source={require('../../assets/check-circle.png')} style={{width: 16, height: 16, marginRight: 6}} />
-                  <TextR>Kids Park</TextR>
-                </View>
-
-                <View style={{flexDirection: 'row', marginTop: 10}}>
-                  <Image source={require('../../assets/check-circle.png')} style={{width: 16, height: 16, marginRight: 6}} />
-                  <TextR>Kids Park</TextR>
-                </View>
+            <TextR style={{marginTop: 6, lineHeight: 26}}>Berada di jalur jalan provinsi yang menghubungkan Denpasar Singaraja serta letaknya yang dekat dengan Kebun Raya Eka Karya menjadikan tempat Bali.</TextR>
+            <View style={{marginTop: 20}}>
+              <TextR fontFamily={_fonts.semibold} fontSize={16}>
+                Photos
+              </TextR>
+              <View style={{flexDirection: 'row', marginTop: 6}}>
+                <Image source={require('../../assets/ciliwung.png')} style={{width: 70, height: 70, borderRadius: 24}} />
+                <Image source={require('../../assets/ciliwung.png')} style={{width: 70, height: 70, borderRadius: 24, marginLeft: 16}} />
+                <Image source={require('../../assets/ciliwung.png')} style={{width: 70, height: 70, borderRadius: 24, marginLeft: 16}} />
               </View>
             </View>
-          </View>
+            <View style={{marginTop: 20}}>
+              <TextR fontFamily={_fonts.semibold} fontSize={16}>
+                Interests
+              </TextR>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{flex: 1}}>
+                  <View style={{flexDirection: 'row', marginTop: 10}}>
+                    <Image source={require('../../assets/check-circle.png')} style={{width: 16, height: 16, marginRight: 6}} />
+                    <TextR>Kids Park</TextR>
+                  </View>
+
+                  <View style={{flexDirection: 'row', marginTop: 10}}>
+                    <Image source={require('../../assets/check-circle.png')} style={{width: 16, height: 16, marginRight: 6}} />
+                    <TextR>Kids Park</TextR>
+                  </View>
+                </View>
+                <View style={{flex: 1}}>
+                  <View style={{flexDirection: 'row', marginTop: 10}}>
+                    <Image source={require('../../assets/check-circle.png')} style={{width: 16, height: 16, marginRight: 6}} />
+                    <TextR>Kids Park</TextR>
+                  </View>
+
+                  <View style={{flexDirection: 'row', marginTop: 10}}>
+                    <Image source={require('../../assets/check-circle.png')} style={{width: 16, height: 16, marginRight: 6}} />
+                    <TextR>Kids Park</TextR>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </ScrollView>
         </View>
 
         <View style={{flex: 0.2, justifyContent: 'flex-end'}}>
@@ -71,12 +78,12 @@ export default function DetailPlaceScreen({navigation}) {
               </TextR>
             </View>
             <View style={{flex: 1}}>
-              <Button label="Book Now" onPress={() => navigation.navigate(_screens.SignUp)} />
+              <Button label="Book Now" onPress={() => navigation.navigate(_screens.SeatBook)} />
             </View>
           </View>
         </View>
       </View>
       {/* </ScrollView> */}
-    </SafeAreaView>
+    </View>
   );
 }

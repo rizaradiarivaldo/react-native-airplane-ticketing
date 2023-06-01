@@ -14,7 +14,7 @@ export default function SplashScreen({navigation}) {
 
   return (
     <View style={styles.main}>
-      <Image source={_const.airplane_logo} />
+      <Image source={_const.airplane_logo} style={{width: 100, height: 100}} />
       <TextR style={{letterSpacing: 20, marginTop: 50}} color={_const.whiteColor} fontFamily={_fonts.medium} fontSize={32}>
         AIRPLANE
       </TextR>
